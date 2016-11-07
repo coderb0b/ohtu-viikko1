@@ -75,4 +75,18 @@ public class VarastoTest {
         varasto = new Varasto(-1,-1);
         varasto.toString();
     }
+    
+    @Test
+    public void lisaaAltaNollan() {
+        varasto.lisaaVarastoon(-1);
+        assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
+        
+        varasto.lisaaVarastoon(2);
+        assertEquals(0, varasto.otaVarastosta(-1), vertailuTarkkuus);
+        
+        varasto.lisaaVarastoon(11);
+        assertEquals(10, varasto.otaVarastosta(100), vertailuTarkkuus);
+        
+        
+    }
 }
