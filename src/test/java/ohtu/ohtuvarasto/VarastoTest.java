@@ -85,7 +85,7 @@ public class VarastoTest {
         assertEquals(0, varasto.otaVarastosta(-1), vertailuTarkkuus);
         
         varasto.lisaaVarastoon(11);
-        assertEquals(17, varasto.otaVarastosta(100), vertailuTarkkuus);
+        assertEquals(10, varasto.otaVarastosta(100), vertailuTarkkuus);
         
         
     }
